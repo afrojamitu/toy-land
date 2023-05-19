@@ -11,6 +11,7 @@ import AuthProvider from './Provider/AuthProvider';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Register/Register';
 import Blogs from './Pages/Blogs/Blogs';
+import AllToys from './Pages/AllToys/AllToys';
 
 
 const router = createBrowserRouter([
@@ -23,8 +24,12 @@ const router = createBrowserRouter([
         element: <Home></Home>
       },
       {
-        path: 'blogs',
+        path: '/blogs',
         element: <Blogs></Blogs>
+      },
+      {
+        path: '/alltoys',
+        element: <AllToys></AllToys>
       },
       {
         path: '/login',

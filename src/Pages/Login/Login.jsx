@@ -3,9 +3,19 @@ import { FaGithub, FaGoogle, FaTwitter } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Login = () => {
+
+    const handleLogin = event =>{
+        event.preventDefault();
+
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(email, password);
+    }
+
     return (
         <div className='md:w-9/12 mx-5 md:mx-auto'>
-            <form className=' my-20 rounded-xl w-full grid md:grid-cols-2 justify-between items-center'>
+            <form onSubmit={handleLogin} className=' my-20 rounded-xl w-full grid md:grid-cols-2 justify-between items-center'>
                 <div className='bg-blue-50 p-10 md:p-20 space-y-4'>
                     <div>
                         <label>Email Address</label>
@@ -17,7 +27,7 @@ const Login = () => {
                         <input type="password" name='password' placeholder="Your Password" className="w-full px-4 py-2 rounded-lg block" />
                     </div>
 
-                    <button className='border-2 border-blue-400 bg-blue-400 hover:bg-transparent font-bold text-black rounded w-full py-1' style={{ transition: '0.5s' }} >Login</button>
+                    <input className='border-2 border-blue-400 bg-blue-400 hover:bg-transparent font-bold text-black rounded w-full py-1' style={{ transition: '0.5s' }}  type="submit" value="Login" />
 
                     <div className="divider">OR</div>
 

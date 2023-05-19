@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 
 const Login = () => {
     return (
-        <div className='md:w-9/12 mx-5 md:mx-auto login-banner'>
-            <form className=' my-20 rounded-lg w-full grid md:grid-cols-2 justify-between items-center'>
+        <div className='md:w-9/12 mx-5 md:mx-auto'>
+            <form className=' my-20 rounded-xl w-full grid md:grid-cols-2 justify-between items-center'>
                 <div className='bg-blue-50 p-10 md:p-20 space-y-4'>
                     <div>
                         <label>Email Address</label>
@@ -29,7 +29,7 @@ const Login = () => {
                         <button className='bg-slate-300 px-2 py-2 rounded-full text-blue-500'> <FaTwitter /> </button>
                     </div>
 
-                    <p className='text-center text-md'>New to ToyLand? <Link to='/register' className='text-blue-600 hover:underline'>Sign In</Link></p>
+                    <p className='text-center text-md'>New to ToyLand? <Link to='/register' className='text-blue-600 hover:underline'>Sign Up</Link></p>
                 </div>
 
                 <div className='flex justify-center'>

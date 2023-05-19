@@ -7,12 +7,13 @@ import {
 } from "react-router-dom";
 import Home from './Pages/Home/Home/Home.jsx';
 import Main from './Layout/Main.jsx';
-import AuthProvider from './Provider/AuthProvider';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Register/Register';
 import Blogs from './Pages/Blogs/Blogs';
 import AllToys from './Pages/AllToys/AllToys';
 import ToyDetail from './Pages/ToyDetail/ToyDetail';
+import PrivateRoute from './Routes/PrivateRoute';
+import AuthProvider from './Provider/AuthProvider';
 
 
 const router = createBrowserRouter([
@@ -34,7 +35,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/toydetail/:id',
-        element: <ToyDetail></ToyDetail>,
+        element: <PrivateRoute><ToyDetail></ToyDetail></PrivateRoute>,
         loader: ({params}) => fetch(`http://localhost:5000/alltoys/${params.id}`)
       },
       {

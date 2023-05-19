@@ -5,10 +5,10 @@ import { AuthContext } from '../../../Provider/AuthProvider';
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext)
 
-    const handleLogout = () =>{
+    const handleLogout = () => {
         logOut()
-        .then(() =>{})
-        .catch(error => console.log(error))
+            .then(() => { })
+            .catch(error => console.log(error))
     }
 
     return (
@@ -22,14 +22,18 @@ const Navbar = () => {
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 space-y-5 shadow bg-base-100 rounded-box w-52">
                             <Link to='/'> Home</Link>
                             <Link to='/allToys'>All Toys</Link>
-                            <Link to='/myToys'>My Toys</Link>
-                            <Link to='/add-a-toy'>Add A Toy</Link>
+                            {
+                                user && <>
+                                    <Link to='/myToys'>My Toys</Link>
+                                    <Link to='/add-a-toy'>Add A Toy</Link>
+                                </>
+                            }
                             <Link to='/blogs'>Blogs</Link>
 
                             {
                                 user?.email ? <Link onClick={handleLogout} className='border border-blue-500 hover:bg-blue-500 hover:text-white rounded text-blue-500 px-4 py-1 font-normal' style={{ transition: '0.5s' }}>Logout</Link>
-                                :
-                                <Link to='/login' className='border border-blue-500 hover:bg-blue-500 hover:text-white rounded text-blue-500 px-4 py-1 font-normal' style={{ transition: '0.5s' }}>Login</Link>
+                                    :
+                                    <Link to='/login' className='border border-blue-500 hover:bg-blue-500 hover:text-white rounded text-blue-500 px-4 py-1 font-normal' style={{ transition: '0.5s' }}>Login</Link>
                             }
 
                         </ul>
@@ -42,8 +46,12 @@ const Navbar = () => {
                     <ul className="menu menu-horizontal px-1 text-lg font-semibold space-x-5">
                         <Link to='/'> Home</Link>
                         <Link to='/allToys'>All Toys</Link>
-                        <Link to='/myToys'>My Toys</Link>
-                        <Link to='/add-a-toy'>Add A Toy</Link>
+                        {
+                            user && <>
+                                <Link to='/myToys'>My Toys</Link>
+                                <Link to='/add-a-toy'>Add A Toy</Link>
+                            </>
+                        }
                         <Link to='/blogs'>Blogs</Link>
 
                     </ul>
@@ -55,8 +63,8 @@ const Navbar = () => {
 
                     {
                         user?.email ? <Link onClick={handleLogout} className='border border-blue-500 hover:bg-blue-500 hover:text-white rounded text-blue-500 px-4 py-1 font-normal' style={{ transition: '0.5s' }}>Logout</Link>
-                        :
-                        <Link to='/login' className='border border-blue-500 hover:bg-blue-500 hover:text-white rounded text-blue-500 px-4 py-1 font-normal' style={{ transition: '0.5s' }}>Login</Link>
+                            :
+                            <Link to='/login' className='border border-blue-500 hover:bg-blue-500 hover:text-white rounded text-blue-500 px-4 py-1 font-normal' style={{ transition: '0.5s' }}>Login</Link>
                     }
                 </div>
             </div>

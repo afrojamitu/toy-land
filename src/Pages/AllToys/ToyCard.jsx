@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ToyCard = ({ alltoy }) => {
 
@@ -12,7 +13,7 @@ const ToyCard = ({ alltoy }) => {
             <p className='text-lg'>Sub Category: {sub_category}</p>
             <p className='text-lg'>Available Quantity: {available_quantity}</p>
             <h1 className='text-lg'>Seller Name: {seller_name}</h1>
-            <button className='bg-blue-600 hover:bg-blue-800 font-bold text-white rounded px-4 py-1' style={{ transition: '0.5s' }} >View Detail</button>
+            <Link to={`/toydetail/${_id}`} className='bg-blue-600 hover:bg-blue-800 font-bold text-white rounded px-4 py-1' style={{ transition: '0.5s' }} >View Detail</Link>
         </div>
     );
 };

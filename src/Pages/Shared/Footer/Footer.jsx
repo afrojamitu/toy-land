@@ -16,7 +16,7 @@ const Footer = () => {
                     <p className='flex items-center gap-3'><FaPhone className='text-md' />+880133 333 333</p>
                 </div>
                 <div className='md:pt-16'>
-                    <span className="footer-title">Company</span>
+                    <span className="footer-title">Quick Links</span>
                     <Link to='/' className="link link-hover">Home</Link>
                     <Link to='/allToys' className="link link-hover">All Toys</Link>
                     <Link to='/add-a-toy' className="link link-hover">Add a Toy</Link>

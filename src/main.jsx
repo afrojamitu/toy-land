@@ -10,6 +10,7 @@ import Main from './Layout/Main.jsx';
 import AuthProvider from './Provider/AuthProvider';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Register/Register';
+import Blogs from './Pages/Blogs/Blogs';
 
 
 const router = createBrowserRouter([
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>
+      },
+      {
+        path: 'blogs',
+        element: <Blogs></Blogs>
       },
       {
         path: '/login',

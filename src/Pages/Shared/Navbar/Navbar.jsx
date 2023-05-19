@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../Provider/AuthProvider';
 
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext)
+
+    const handleLogout = () =>{
+        logOut()
+        .then(() =>{})
+        .catch(error => console.log(error))
+    }
+
     return (
         <div className='bg-blue-50'>
             <div className="navbar md:w-9/12 mx-auto h-20">
@@ -17,9 +26,11 @@ const Navbar = () => {
                             <Link to='/add-a-toy'>Add A Toy</Link>
                             <Link to='/blogs'>Blogs</Link>
 
-                            <Link className='border border-blue-500 hover:bg-blue-500 hover:text-white rounded text-blue-500 px-4 py-1 font-normal' style={{ transition: '0.5s' }}>Logout</Link>
-
-                            <Link to='/login' className='border border-blue-500 hover:bg-blue-500 hover:text-white rounded text-blue-500 px-4 py-1 font-normal' style={{ transition: '0.5s' }}>Login</Link>
+                            {
+                                user?.email ? <Link onClick={handleLogout} className='border border-blue-500 hover:bg-blue-500 hover:text-white rounded text-blue-500 px-4 py-1 font-normal' style={{ transition: '0.5s' }}>Logout</Link>
+                                :
+                                <Link to='/login' className='border border-blue-500 hover:bg-blue-500 hover:text-white rounded text-blue-500 px-4 py-1 font-normal' style={{ transition: '0.5s' }}>Login</Link>
+                            }
 
                         </ul>
                     </div>
@@ -38,11 +49,15 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end space-x-4">
-                    <img className='w-12 rounded-full' src="/src/assets/images/Afroja-Akther-Mitu.png" alt="" />
+                    {
+                        user && <img className='w-12 rounded-full' src="/src/assets/images/Afroja-Akther-Mitu.png" alt="" />
+                    }
 
-                    <Link className='hidden md:block border border-blue-500 hover:bg-blue-500 hover:text-white rounded text-blue-500 px-4 py-1 font-normal' style={{ transition: '0.5s' }}>Logout</Link>
-
-                    <Link to='/login' className='hidden md:block border border-blue-500 hover:bg-blue-500 hover:text-white rounded text-blue-500 px-4 py-1 font-normal' style={{ transition: '0.5s' }}>Login</Link>
+                    {
+                        user?.email ? <Link onClick={handleLogout} className='border border-blue-500 hover:bg-blue-500 hover:text-white rounded text-blue-500 px-4 py-1 font-normal' style={{ transition: '0.5s' }}>Logout</Link>
+                        :
+                        <Link to='/login' className='border border-blue-500 hover:bg-blue-500 hover:text-white rounded text-blue-500 px-4 py-1 font-normal' style={{ transition: '0.5s' }}>Login</Link>
+                    }
                 </div>
             </div>
         </div>

@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Register.css'
+import { AuthContext } from '../../Provider/AuthProvider';
 
 const Register = () => {
 
     const [error, setError] = useState()
+    const { createUser } = useContext(AuthContext);
 
-    const handleRegister = event =>{
+    const handleRegister = event => {
         event.preventDefault();
 
         const form = event.target;
@@ -17,13 +19,23 @@ const Register = () => {
         const photoURL = form.photoURL.value;
 
         setError('');
-        if(password !== confirmPassword){
+        if (password !== confirmPassword) {
             setError("Your Password Didn't Matched");
             return;
         }
 
-        const newUser = {name, email, password, photoURL};
-        console.log(newUser);
+        createUser(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                form.reset()
+            })
+            .catch(error => {
+                console.log(error);
+            })
+
+        // const newUser = {name, email, password, photoURL};
+        // console.log(newUser);
     }
 
     return (
@@ -56,7 +68,7 @@ const Register = () => {
                             <input type="text" name='photoURL' placeholder="Your Photo URL" className="w-full px-4 py-2 rounded-lg block border" required />
                         </div>
 
-                        <input className='border-2 border-blue-400 bg-blue-400 hover:bg-transparent font-bold text-black rounded w-full py-1' style={{ transition: '0.5s' }}  type="submit" value="Register" />
+                        <input className='border-2 border-blue-400 bg-blue-400 hover:bg-transparent font-bold text-black rounded w-full py-1' style={{ transition: '0.5s' }} type="submit" value="Register" />
 
                         <p className='text-red-600 text-center text-lg'>{error}</p>
 

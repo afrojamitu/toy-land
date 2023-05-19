@@ -14,6 +14,7 @@ import AllToys from './Pages/AllToys/AllToys';
 import ToyDetail from './Pages/ToyDetail/ToyDetail';
 import PrivateRoute from './Routes/PrivateRoute';
 import AuthProvider from './Provider/AuthProvider';
+import AddaToy from './Pages/AddaToy/AddaToy';
 
 
 const router = createBrowserRouter([
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
       {
         path: '/register',
         element: <Register></Register>
+      },
+      {
+        path: '/add-a-toy',
+        element: <AddaToy></AddaToy>
       }
     ]
   },

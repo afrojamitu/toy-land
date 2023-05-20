@@ -13,7 +13,7 @@ const Navbar = () => {
 
     return (
         <div className='bg-[#000C32]'>
-            <div className="navbar md:w-9/12 mx-auto h-20 text-white">
+            <div className="navbar md:w-9/12 mx-auto h-20 text-white" data-aos="zoom-out" data-aos-duration="2000">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">

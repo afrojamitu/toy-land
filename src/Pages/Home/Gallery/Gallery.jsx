@@ -7,7 +7,7 @@ const Gallery = () => {
         <div className="my-16">
             <div className="flex flex-wrap -m-4">
                 {/* img-2 */}
-                <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4">
+                <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4" data-aos="fade-right" data-aos-duration="2000">
                     <div className="relative">
                         <div className="aspect-w-1 aspect-h-1 h-60">
                             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-0 hover:opacity-75 transition-opacity duration-300" />
@@ -19,7 +19,7 @@ const Gallery = () => {
                     </div>
                 </div>
                 {/* img-3 */}
-                <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4">
+                <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4" data-aos="fade-right" data-aos-duration="2000">
                     <div className="relative">
                         <div className="aspect-w-1 aspect-h-1 h-60">
                             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-0 hover:opacity-75 transition-opacity duration-300" />
@@ -31,7 +31,7 @@ const Gallery = () => {
                     </div>
                 </div>
                 {/* img-4 */}
-                <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4">
+                <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4" data-aos="fade-left" data-aos-duration="2000">
                     <div className="relative">
                         <div className="aspect-w-1 aspect-h-1 h-60">
                             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-0 hover:opacity-75 transition-opacity duration-300" />
@@ -43,7 +43,7 @@ const Gallery = () => {
                     </div>
                 </div>
                 {/* img-5 */}
-                <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4">
+                <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4" data-aos="fade-left" data-aos-duration="2000">
                     <div className="relative">
                         <div className="aspect-w-1 aspect-h-1 h-60">
                             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-0 hover:opacity-75 transition-opacity duration-300" />
@@ -55,7 +55,7 @@ const Gallery = () => {
                     </div>
                 </div>
                 {/* img-6 */}
-                <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4">
+                <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4" data-aos="fade-right" data-aos-duration="2000">
                     <div className="relative">
                         <div className="aspect-w-1 aspect-h-1 h-60">
                             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-0 hover:opacity-75 transition-opacity duration-300" />
@@ -67,7 +67,7 @@ const Gallery = () => {
                     </div>
                 </div>
                 {/* img-7 */}
-                <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4">
+                <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4" data-aos="fade-right" data-aos-duration="2000">
                     <div className="relative">
                         <div className="aspect-w-1 aspect-h-1 h-60">
                             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-0 hover:opacity-75 transition-opacity duration-300" />
@@ -79,7 +79,7 @@ const Gallery = () => {
                     </div>
                 </div>
                 {/* img-8 */}
-                <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4">
+                <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4" data-aos="fade-left" data-aos-duration="2000">
                     <div className="relative">
                         <div className="aspect-w-1 aspect-h-1 h-60">
                             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-0 hover:opacity-75 transition-opacity duration-300" />
@@ -92,7 +92,7 @@ const Gallery = () => {
                 </div>
 
                 {/* img-9 */}
-                <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4">
+                <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4" data-aos="fade-left" data-aos-duration="2000">
                     <div className="relative">
                         <div className="aspect-w-1 aspect-h-1 h-60">
                             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-0 hover:opacity-75 transition-opacity duration-300" />
@@ -104,7 +104,7 @@ const Gallery = () => {
                     </div>
                 </div>
                 {/* img-10 */}
-                <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4">
+                <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4" data-aos="fade-right" data-aos-duration="2000">
                     <div className="relative">
                         <div className="aspect-w-1 aspect-h-1 h-60">
                             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-0 hover:opacity-75 transition-opacity duration-300" />
@@ -116,7 +116,7 @@ const Gallery = () => {
                     </div>
                 </div>
                 {/* img-10 */}
-                <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4">
+                <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4" data-aos="fade-right" data-aos-duration="2000">
                     <div className="relative">
                         <div className="aspect-w-1 aspect-h-1 h-60">
                             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-0 hover:opacity-75 transition-opacity duration-300" />
@@ -128,7 +128,7 @@ const Gallery = () => {
                     </div>
                 </div>
                 {/* img-11 */}
-                <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4">
+                <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4" data-aos="fade-left" data-aos-duration="2000">
                     <div className="relative">
                         <div className="aspect-w-1 aspect-h-1 h-60">
                             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-0 hover:opacity-75 transition-opacity duration-300" />
@@ -140,7 +140,7 @@ const Gallery = () => {
                     </div>
                 </div>
                 {/* img-12 */}
-                <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4">
+                <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4" data-aos="fade-left" data-aos-duration="2000">
                     <div className="relative">
                         <div className="aspect-w-1 aspect-h-1 h-60">
                             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-0 hover:opacity-75 transition-opacity duration-300" />

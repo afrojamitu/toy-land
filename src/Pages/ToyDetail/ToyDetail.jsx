@@ -28,7 +28,7 @@ const ToyDetail = () => {
                     <p className='text-lg'>Seller Email: {seller_email}</p>
                     <p className='text-lg pb-3'>Available Quantity: {available_quantity}</p>
 
-                    <button className='border border-blue-500 hover:bg-blue-500 hover:text-white rounded text-blue-500 px-4 py-1 font-normal' style={{ transition: '0.5s' }}>Place Order</button>
+                    <button className='bg-[#000C32] border-2 border-[#000C32] hover:bg-transparent font-bold text-white hover:text-[#000C32] rounded px-4 py-1' style={{ transition: '0.5s' }}>Place Order</button>
                 </div>
 
                 <div>

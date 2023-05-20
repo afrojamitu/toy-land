@@ -19,14 +19,15 @@ const AllToys = () => {
                 <p className='text-lg text-slate-500'>Barbie dolls have been a beloved toy for children around the world for decades. While it is difficult to quantify exactly how much kids love Barbie, it is safe to say that Barbie has had a significant impact and a large fan base.</p>
             </div>
 
-            <div className='my-10 grid md:grid-cols-3 gap-5'>
+            <div className='my-10 grid gap-5'>
+                
                 {
                     alltoys.map(alltoy => <ToyCard key={alltoy._id} alltoy={alltoy}></ToyCard>)
                 }
             </div>
-            <div className='flex justify-center'>
+            {/* <div className='flex justify-center'>
                 <button className='bg-[#000C32] border-2 border-[#000C32] hover:bg-transparent font-bold text-white hover:text-[#000C32] rounded px-4 py-1' style={{ transition: '0.5s' }} >View All</button>
-            </div>
+            </div> */}
         </div>
     );
 };

@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
+import Swal from 'sweetalert2'
 
 const AddaToy = () => {
 
@@ -32,6 +33,26 @@ const AddaToy = () => {
             description
         }
         console.log(addToy);
+
+        fetch('http://localhost:5000/alltoys',{
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(addToy)
+        })
+        .then(res => res.json())
+        .then(data => {
+            if(data.insertedId){
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'Successfully added a toy!',
+                    icon: 'success',
+                    confirmButtonText: 'Okay'
+                  })
+                  form.reset()
+            }
+        })
     }
 
     return (

@@ -1,11 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
 import MyToy from './MyToy';
+import Swal from 'sweetalert2';
 
 const MyToys = () => {
     const { user } = useContext(AuthContext);
     const [myToys, setMyToys] = useState([])
-    console.log(myToys);
+    // console.log(myToys);
 
     const url = `http://localhost:5000/myToys?email=${user.email}`;
 
@@ -17,9 +18,42 @@ const MyToys = () => {
             })
     }, [user, url])
 
+    const handleDelete = id => {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:5000/myToys/${id}`, {
+                    method: 'DELETE'
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.deletedCount > 0) {
+                            Swal.fire(
+                                'Deleted!',
+                                'Your file has been deleted.',
+                                'success'
+                            )
+                            const remaining = myToys.filter(myToy => myToy._id !== id)
+                            setMyToys(remaining)
+                        }
+
+                    })
+            }
+        })
+    }
+
+    
+
     return (
         <div className='md:w-9/12 md:mx-auto mx-10'>
-            <h1 className='text-3xl text-center font-bold my-5'>My toys</h1>
+            <h1 className='text-3xl text-center font-bold my-5'>You Added : {myToys.length} Toys</h1>
 
             <div className="overflow-x-auto w-full">
                 <table className="table w-full">
@@ -37,7 +71,7 @@ const MyToys = () => {
                         </tr>
                     </thead>
                     {
-                        myToys.map(toy => <MyToy key={toy._id} toy={toy}></MyToy>)
+                        myToys.map(toy => <MyToy key={toy._id} toy={toy} handleDelete={handleDelete}></MyToy>)
                     }
                 </table>
             </div>

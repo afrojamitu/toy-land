@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ToyCard from './ToyCard';
+import { FaSearch } from 'react-icons/fa';
 
 const AllToys = () => {
 
@@ -20,14 +21,34 @@ const AllToys = () => {
             </div>
 
             <div className='my-10 grid gap-5'>
-                
-                {
-                    alltoys.map(alltoy => <ToyCard key={alltoy._id} alltoy={alltoy}></ToyCard>)
-                }
+
+                <div className='flex justify-end items-center relative'>
+                    <input type="search" name="" id="" className='border py-2 px-4 rounded-full w-full md:w-1/3'/>
+                    <button className='w-8 h-8 rounded-full text-white flex items-center justify-center bg-[#000C32] absolute right-1'> <FaSearch/> </button>
+                </div>
+
+                <div className="overflow-x-auto w-full">
+                    <table className="table w-full">
+                        {/* head */}
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Toy</th>
+                                <th>Toy Name</th>
+                                <th>Price</th>
+                                <th>Sub Category</th>
+                                <th>Available Quantity</th>
+                                <th>Seller Name</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        {
+                            alltoys.map(alltoy => <ToyCard key={alltoy._id} alltoy={alltoy}></ToyCard>)
+                        }
+                    </table>
+                </div>
             </div>
-            {/* <div className='flex justify-center'>
-                <button className='bg-[#000C32] border-2 border-[#000C32] hover:bg-transparent font-bold text-white hover:text-[#000C32] rounded px-4 py-1' style={{ transition: '0.5s' }} >View All</button>
-            </div> */}
         </div>
     );
 };

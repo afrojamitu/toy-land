@@ -22,14 +22,14 @@ const AddaToy = () => {
         const description = form.description.value;
 
         const addToy ={
-            toyName,
-            sub_ategory : subCategory,
+            toy_name: toyName,
+            sub_category : subCategory,
             price,
             rating,
             available_quantity: quantity,
             toy_img: photoURL,
             seller_name: sellerName,
-            seller_email: sellerEmail,
+            email: sellerEmail,
             description
         }
         console.log(addToy);

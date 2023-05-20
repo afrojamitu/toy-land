@@ -4,7 +4,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 
 const Login = () => {
-    const {signIn} = useContext(AuthContext);
+    const {signIn, googleSignIn} = useContext(AuthContext);
     const location = useLocation()
     const navigate = useNavigate()
 
@@ -28,6 +28,15 @@ const Login = () => {
         .catch(error => console.log(error))
     }
 
+    const handleGoogleSignIn = () =>{
+        googleSignIn()
+        .then(result =>{
+            console.log(result);
+        })
+        .catch(error => console.log(error))
+    }
+
+
     return (
         <div className='md:w-9/12 mx-5 md:mx-auto'>
             <h1 className='text-3xl text-center font-bold pt-8'>Please Login</h1>
@@ -49,7 +58,7 @@ const Login = () => {
                     <div className="divider">OR</div>
 
                     <div className='flex items-center gap-5 justify-center py-4'>
-                        <button className='bg-slate-300 px-2 py-2 rounded-full text-red-500'> <FaGoogle /> </button>
+                        <button onClick={handleGoogleSignIn} className='bg-slate-300 px-2 py-2 rounded-full text-red-500'> <FaGoogle /> </button>
 
                         <button className='bg-slate-300 px-2 py-2 rounded-full '> <FaGithub /> </button>
 

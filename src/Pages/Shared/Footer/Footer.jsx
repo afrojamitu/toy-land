@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <div className='bg-blue-50'>
-            <footer className="footer w-9/12 mx-auto my-10 py-10 text-base-content">
+        <div className='bg-[#000C32]'>
+            <footer className="footer w-9/12 mx-auto my-10 py-10 text-white">
                 <div className='space-y-3'>
                     <div className='flex items-center'>
-                        <img className='w-28' src="/src/assets/images/logo.png" alt="" />
-                        <h1 className='text-3xl font-bold border-b-2 border-blue-500 rounded-lg'>ToyLand</h1>
+                        <img className='w-24' src="https://i.ibb.co/0GvR3S0/png-transparent-belle-castle-disney-princess-castle-photography-world-disney-princess-thumbnail-remo.png" alt="" />
+                        <h1 className='text-3xl font-bold border-b-2 border-purple-500 rounded-lg'>ToyLand</h1>
                     </div>
                     <p className='flex items-center gap-3'><FaMapMarkerAlt className=' text-lg' />North Patenga, Chittagong</p>
                     <p className='flex items-center gap-3'><FaEnvelope className='text-md' />afrojamituu@gmail.com</p>
@@ -34,7 +34,7 @@ const Footer = () => {
                 </div>
             </footer>
 
-            <div className='text-center py-8 border-t-2 border-blue-200'>
+            <div className='text-center py-8 border-t-2 text-white border-blue-200'>
                 <p>Copyright © 2023 - All right reserved by Toy Land ltd</p>
             </div>
         </div>

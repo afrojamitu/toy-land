@@ -30,19 +30,21 @@ const Login = () => {
 
     return (
         <div className='md:w-9/12 mx-5 md:mx-auto'>
-            <form onSubmit={handleLogin} className=' my-20 rounded-xl w-full grid md:grid-cols-2 justify-between items-center'>
-                <div className='bg-blue-50 p-10 md:p-20 space-y-4'>
+            <h1 className='text-3xl text-center font-bold pt-8'>Please Login</h1>
+
+            <form onSubmit={handleLogin} className='mt-10 mb-20 rounded-xl w-full grid md:grid-cols-2 justify-between items-center'>
+                <div className='bg-purple-200 p-10 md:p-20 space-y-4 rounded-lg'>
                     <div>
-                        <label>Email Address</label>
+                        <label className='text-lg font-semibold mb-1'>Email Address</label>
                         <input type="email" name='email' placeholder="Your Registered Email" className="w-full px-4 py-2 rounded-lg block" />
                     </div>
 
                     <div>
-                        <label>Password</label>
+                        <label className='text-lg font-semibold mb-1'>Password</label>
                         <input type="password" name='password' placeholder="Your Password" className="w-full px-4 py-2 rounded-lg block" />
                     </div>
 
-                    <input className='border-2 border-blue-400 bg-blue-400 hover:bg-transparent font-bold text-black rounded w-full py-1' style={{ transition: '0.5s' }} type="submit" value="Login" />
+                    <input className='bg-[#000C32] border-2 border-[#000C32] hover:bg-transparent font-bold text-white hover:text-[#000C32] rounded w-full py-1' style={{ transition: '0.5s' }} type="submit" value="Login" />
 
                     <div className="divider">OR</div>
 

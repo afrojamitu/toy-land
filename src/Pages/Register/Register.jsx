@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
-import './Register.css'
 import { AuthContext } from '../../Provider/AuthProvider';
 
 const Register = () => {
@@ -33,42 +32,40 @@ const Register = () => {
             .catch(error => {
                 console.log(error);
             })
-
-        // const newUser = {name, email, password, photoURL};
-        // console.log(newUser);
     }
 
     return (
         <div className=''>
-            <div className='md:w-9/12 mx-5 md:mx-auto my-20'>
-                <form onSubmit={handleRegister} className='bg-gradient-to-r from-blue-100 to-blue-50 p-10 md:p-20 rounded-xl md:w-2/3 mx-auto'>
+            <div className='md:w-9/12 mx-5 md:mx-auto mt-10 mb-20'>
+            <h1 className='text-3xl text-center font-bold pb-8'>Register an Account</h1>
+                <form onSubmit={handleRegister} className='bg-purple-200 p-10 md:p-20 rounded-xl md:w-2/3 mx-auto'>
                     <div className='space-y-4'>
                         <div>
-                            <label className='text-lg'>Full Name</label>
+                            <label className='text-lg font-semibold mb-1'>Full Name</label>
                             <input type="name" name='name' placeholder="Your Full Name" className="w-full px-4 py-2 rounded-lg block border" />
                         </div>
 
                         <div>
-                            <label className='text-lg'>Email Address</label>
+                            <label className='text-lg font-semibold mb-1'>Email Address</label>
                             <input type="email" name='email' placeholder="Your Registered Email" className="w-full px-4 py-2 rounded-lg block border" required />
                         </div>
 
                         <div>
-                            <label className='text-lg'>Password</label>
+                            <label className='text-lg font-semibold mb-1'>Password</label>
                             <input type="password" name='password' placeholder="Your Password" className="w-full px-4 py-2 rounded-lg block border" required />
                         </div>
 
                         <div>
-                            <label className='text-lg'>Confirm Password</label>
+                            <label className='text-lg font-semibold mb-1'>Confirm Password</label>
                             <input type="password" name='confirmPassword' placeholder="Re-enter Your Password" className="w-full px-4 py-2 rounded-lg block border" required />
                         </div>
 
                         <div>
-                            <label className='text-lg'>Your Image URL</label>
+                            <label className='text-lg font-semibold mb-1'>Your Image URL</label>
                             <input type="text" name='photoURL' placeholder="Your Photo URL" className="w-full px-4 py-2 rounded-lg block border" required />
                         </div>
 
-                        <input className='border-2 border-blue-400 bg-blue-400 hover:bg-transparent font-bold text-black rounded w-full py-1' style={{ transition: '0.5s' }} type="submit" value="Register" />
+                        <input className='bg-[#000C32] border-2 border-[#000C32] hover:bg-transparent font-bold text-white hover:text-[#000C32] rounded w-full py-1' style={{ transition: '0.5s' }} type="submit" value="Register" />
 
                         <p className='text-red-600 text-center text-lg'>{error}</p>
 

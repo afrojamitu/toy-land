@@ -25,7 +25,7 @@ const AllToys = () => {
                 }
             </div>
             <div className='flex justify-center'>
-                <button className='bg-blue-600 hover:bg-blue-800 font-bold text-white rounded px-4 py-1' style={{ transition: '0.5s' }} >View All</button>
+                <button className='bg-[#000C32] border-2 border-[#000C32] hover:bg-transparent font-bold text-white hover:text-[#000C32] rounded px-4 py-1' style={{ transition: '0.5s' }} >View All</button>
             </div>
         </div>
     );

@@ -11,7 +11,7 @@ const Gallery = () => {
                     <div className="relative">
                         <div className="aspect-w-1 aspect-h-1 h-60">
                             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-0 hover:opacity-75 transition-opacity duration-300" />
-                            <img src='https://static-ca.gamestop.ca/images/products/762762/3max.jpg' alt='' className="object-cover w-full h-full border-2 p-3 rounded-lg shadow-lg" />
+                            <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo7M8AXQlAHvlSAzgSg9eLptH8VF5xptb9bw&usqp=CAU' alt='' className="object-cover w-full h-full border-2 p-3 rounded-lg shadow-lg" />
                         </div>
                         <div className="absolute bottom-0 left-0 p-4 text-xl text-white">
                             12 Disney Dolls
@@ -154,7 +154,7 @@ const Gallery = () => {
             </div>
 
             <div className='text-center my-10'>
-                <Link className='border-2 border-blue-400 bg-blue-400 hover:bg-transparent font-bold text-black rounded px-4 py-2' style={{ transition: '0.5s' }} >See More Toy's</Link>
+                <Link className='bg-[#000C32] border-2 border-[#000C32] hover:bg-transparent font-bold text-white hover:text-[#000C32] rounded px-4 py-1' style={{ transition: '0.5s' }} >See More Toy's</Link>
             </div>
         </div>
     );

@@ -12,8 +12,8 @@ const Navbar = () => {
     }
 
     return (
-        <div className='bg-blue-50'>
-            <div className="navbar md:w-9/12 mx-auto h-20">
+        <div className='bg-[#000C32]'>
+            <div className="navbar md:w-9/12 mx-auto h-20 text-white">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -31,15 +31,15 @@ const Navbar = () => {
                             <Link to='/blogs'>Blogs</Link>
 
                             {
-                                user?.email ? <Link onClick={handleLogout} className='border border-blue-500 hover:bg-blue-500 hover:text-white rounded text-blue-500 px-4 py-1 font-normal' style={{ transition: '0.5s' }}>Logout</Link>
+                                user?.email ? <button onClick={handleLogout} className='bg-white border-2 border-white hover:bg-transparent font-bold text-purple-700 hover:text-white rounded px-4 py-1' style={{ transition: '0.5s' }}>Logout</button>
                                     :
-                                    <Link to='/login' className='border border-blue-500 hover:bg-blue-500 hover:text-white rounded text-blue-500 px-4 py-1 font-normal' style={{ transition: '0.5s' }}>Login</Link>
+                                    <Link to='/login' className='bg-white border-2 border-white hover:bg-transparent font-bold text-purple-700 hover:text-white rounded px-4 py-1' style={{ transition: '0.5s' }}>Login</Link>
                             }
 
                         </ul>
                     </div>
                     <div>
-                        <Link to='/' className='flex items-center'><img className='w-20 hidden md:block' src="/src/assets/images/logo.png" alt="" /><span className='text-3xl font-bold'>ToyLand</span></Link>
+                        <Link to='/' className='flex items-center'><img className='w-20 hidden md:block' src="https://i.ibb.co/0GvR3S0/png-transparent-belle-castle-disney-princess-castle-photography-world-disney-princess-thumbnail-remo.png" alt="" /><span className='text-3xl font-bold border-b-2 py-1 border-purple-500 rounded-lg'>ToyLand</span></Link>
                     </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">
@@ -62,9 +62,9 @@ const Navbar = () => {
                     }
 
                     {
-                        user?.email ? <Link onClick={handleLogout} className='border border-blue-500 hover:bg-blue-500 hover:text-white rounded text-blue-500 px-4 py-1 font-normal' style={{ transition: '0.5s' }}>Logout</Link>
+                        user?.email ? <button onClick={handleLogout} className='bg-white border-2 border-white hover:bg-transparent font-bold text-purple-700 hover:text-white rounded px-4 py-1' style={{ transition: '0.5s' }}>Logout</button>
                             :
-                            <Link to='/login' className='border border-blue-500 hover:bg-blue-500 hover:text-white rounded text-blue-500 px-4 py-1 font-normal' style={{ transition: '0.5s' }}>Login</Link>
+                            <Link to='/login' className='bg-white border-2 border-white hover:bg-transparent font-bold text-purple-700 hover:text-white rounded px-4 py-1' style={{ transition: '0.5s' }}>Login</Link>
                     }
                 </div>
             </div>

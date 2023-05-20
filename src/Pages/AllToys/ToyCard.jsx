@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 const ToyCard = ({ alltoy }) => {
 
     const { _id, seller_name, toy_img, toy_name, price, available_quantity, sub_category } = alltoy;
+    
 
     return (
             <tbody>
@@ -27,6 +28,7 @@ const ToyCard = ({ alltoy }) => {
 
                     <td><Link to={`/toydetail/${_id}`} className='bg-[#000C32] border-2 border-[#000C32] hover:bg-transparent font-bold text-white hover:text-[#000C32] rounded px-4 py-1' style={{ transition: '0.5s' }} >View Detail</Link></td>
                 </tr>
+                
             </tbody>
     );
 };

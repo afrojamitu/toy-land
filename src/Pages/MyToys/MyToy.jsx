@@ -5,8 +5,6 @@ import { Link } from 'react-router-dom';
 const MyToy = ({ toy, handleDelete }) => {
     const { _id, toy_img, toy_name, price, available_quantity, sub_category } = toy;
 
-    
-
     return (
 
         <tbody>
@@ -27,7 +25,7 @@ const MyToy = ({ toy, handleDelete }) => {
                 <td>{sub_category}</td>
                 <td>{available_quantity}</td>
                 <td><button onClick={() => handleDelete(_id)} className="flex items-center justify-center bg-[#000C32] w-8 h-8 text-white rounded-full"><FaTrashAlt/></button></td>
-                <td><Link className="flex items-center justify-center bg-[#000C32] w-8 h-8 text-white rounded-full"><FaEdit/></Link></td>
+                <td><Link to={`/updateToy/${_id}`} className="flex items-center justify-center bg-[#000C32] w-8 h-8 text-white rounded-full"><FaEdit/></Link></td>
             </tr>
         </tbody>
 

@@ -15,9 +15,14 @@ import ToyDetail from './Pages/ToyDetail/ToyDetail';
 import PrivateRoute from './Routes/PrivateRoute';
 import AuthProvider from './Provider/AuthProvider';
 import AddaToy from './Pages/AddaToy/AddaToy';
+import ErrorPage from './Pages/ErrorPage/ErrorPage';
 
 
 const router = createBrowserRouter([
+  {
+    path: '*',
+    element: <ErrorPage></ErrorPage>
+  },
   {
     path: "/",
     element: <Main></Main>,

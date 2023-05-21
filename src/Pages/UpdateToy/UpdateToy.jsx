@@ -6,6 +6,7 @@ import Swal from 'sweetalert2';
 const UpdateToy = () => {
     const update = useLoaderData();
     const {user} = useContext(AuthContext)
+    console.log(user);
 
     const { _id, seller_name, toy_img, toy_name, price, available_quantity, sub_category, email, rating, description } = update;
 

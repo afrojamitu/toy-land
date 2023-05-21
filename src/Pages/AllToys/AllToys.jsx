@@ -18,9 +18,8 @@ const AllToys = () => {
     const toggleShowAll = () => {
         setShowAll(!showAll);
     };
-
-
     const limitedData = showAll ? alltoys : alltoys.slice(0, 20);
+
 
     return (
         <div className='md:w-9/12 md:mx-auto mx-10 my-16'>
@@ -32,19 +31,19 @@ const AllToys = () => {
             <div className='my-10 grid gap-5'>
 
                 <div className='flex justify-between items-center'>
-                <div>
-                    <select className="bg-[#000C32] border-2 border-[#000C32] hover:bg-transparent font-bold text-white hover:text-[#000C32] rounded px-4 py-1">
-                        <option value="Sort By">Sort by Price</option>
-                        <option value="Ascending">Ascending</option>
-                        <option value="Descending">Descending</option>
-                    </select>
-                </div>
+                    <div>
+                        <select className="bg-[#000C32] border-2 border-[#000C32] hover:bg-transparent font-bold text-white hover:text-[#000C32] rounded px-4 py-1" >
+                            <option value="">Sort by Price</option>
+                            <option value="Ascending">Ascending</option>
+                            <option value="Descending">Descending</option>
+                        </select>
+                    </div>
 
-                <div className='flex justify-end items-center relative'>
-                    <input type="search" name="" id="" className='border-2 py-2 px-4 rounded-full w-full' />
+                    <div className='flex justify-end items-center relative'>
+                        <input type="search" name="" id="" className='border-2 py-2 px-4 rounded-full w-full'/>
 
-                    <button className='w-8 h-8 rounded-full text-white flex items-center justify-center bg-[#000C32] absolute right-1.5'> <FaSearch /> </button>
-                </div>
+                        <button className='w-8 h-8 rounded-full text-white flex items-center justify-center bg-[#000C32] absolute right-1.5'> <FaSearch /> </button>
+                    </div>
                 </div>
 
                 <div className="overflow-x-auto w-full">
@@ -67,6 +66,7 @@ const AllToys = () => {
                             limitedData.map(alltoy => <ToyCard key={alltoy._id} alltoy={alltoy}></ToyCard>)
                         }
                     </table>
+                    
                     {!showAll && (
                         <div colSpan="7" className="text-center">
                             <button

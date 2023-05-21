@@ -72,7 +72,7 @@ const UpdateToy = () => {
 
                         <div>
                             <label className='text-lg font-semibold mb-1'>Sub Category</label>
-                            <input type="subCategory" name='subCategory' placeholder="Sub Category" defaultValue={sub_category} readOnly className="w-full px-4 py-2 rounded-lg block" />
+                            <input type="subCategory" name='subCategory' placeholder="Sub Category" defaultValue={sub_category} className="w-full px-4 py-2 rounded-lg block" />
                         </div>
 
                         <div>

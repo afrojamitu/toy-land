@@ -1,25 +1,35 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import ToyCard from './ToyCard';
 import { FaSearch } from 'react-icons/fa';
+import ReactTab from '../Home/Tab/ReactTab';
+import Home from '../Home/Home/Home'
 
 const AllToys = () => {
 
     const [alltoys, setAllToys] = useState([])
     const [showAll, setShowAll] = useState(false);
+    const [asc, setAsc] = useState(true);
+    const searchRef = useRef(null);
+    const [search, setSearch] = useState('');
 
     useEffect(() => {
-        fetch('http://localhost:5000/alltoys')
+        fetch(`http://localhost:5000/alltoys?search=${search}&sort=${asc ? 'asc' : 'desc'}`)
             .then(res => res.json())
             .then(data => {
                 setAllToys(data);
             });
-    }, [])
+    }, [asc, search])
+
+    const handleSearch = () => {
+        console.log(searchRef.current.value);
+        setSearch(searchRef.current.value);
+    }
 
     const toggleShowAll = () => {
         setShowAll(!showAll);
     };
+    
     const limitedData = showAll ? alltoys : alltoys.slice(0, 20);
-
 
     return (
         <div className='md:w-9/12 md:mx-auto mx-10 my-16'>
@@ -32,17 +42,18 @@ const AllToys = () => {
 
                 <div className='flex justify-between items-center'>
                     <div>
-                        <select className="bg-[#000C32] border-2 border-[#000C32] hover:bg-transparent font-bold text-white hover:text-[#000C32] rounded px-4 py-1" >
-                            <option value="">Sort by Price</option>
-                            <option value="Ascending">Ascending</option>
-                            <option value="Descending">Descending</option>
-                        </select>
+                        <button className=" border-2 border-[#000C32]  font-bold  text-[#000C32] rounded px-4 py-1"
+
+                            onClick={() => setAsc(!asc)}
+                        >{asc ? 'Price: High to Low' : 'Price: Low to High'}</button>
+
+                        <button  ></button>
                     </div>
 
                     <div className='flex justify-end items-center relative'>
-                        <input type="search" name="" id="" className='border-2 py-2 px-4 rounded-full w-full'/>
+                        <input ref={searchRef} type="search" name="" id="" className='border-2 py-2 px-4 rounded-full w-full' />
 
-                        <button className='w-8 h-8 rounded-full text-white flex items-center justify-center bg-[#000C32] absolute right-1.5'> <FaSearch /> </button>
+                        <button onClick={handleSearch} className='w-8 h-8 rounded-full text-white flex items-center justify-center bg-[#000C32] absolute right-1.5'> <FaSearch /> </button>
                     </div>
                 </div>
 
@@ -66,7 +77,7 @@ const AllToys = () => {
                             limitedData.map(alltoy => <ToyCard key={alltoy._id} alltoy={alltoy}></ToyCard>)
                         }
                     </table>
-                    
+
                     {!showAll && (
                         <div colSpan="7" className="text-center">
                             <button

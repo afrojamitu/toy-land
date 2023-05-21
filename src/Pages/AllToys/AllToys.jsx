@@ -7,6 +7,7 @@ import Home from '../Home/Home/Home'
 const AllToys = () => {
 
     const [alltoys, setAllToys] = useState([])
+    console.log(alltoys);
     const [showAll, setShowAll] = useState(false);
     const [asc, setAsc] = useState(true);
     const searchRef = useRef(null);
@@ -47,7 +48,6 @@ const AllToys = () => {
                             onClick={() => setAsc(!asc)}
                         >{asc ? 'Price: High to Low' : 'Price: Low to High'}</button>
 
-                        <button  ></button>
                     </div>
 
                     <div className='flex justify-end items-center relative'>
@@ -77,6 +77,9 @@ const AllToys = () => {
                             limitedData.map(alltoy => <ToyCard key={alltoy._id} alltoy={alltoy}></ToyCard>)
                         }
                     </table>
+                    {/* {
+                        alltoys.map(toy => <ReactTab key={toy._id} toy={toy}></ReactTab>)
+                    } */}
 
                     {!showAll && (
                         <div colSpan="7" className="text-center">

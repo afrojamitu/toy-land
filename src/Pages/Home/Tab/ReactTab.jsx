@@ -15,7 +15,7 @@ const ReactTab = () => {
     console.log(currentToy);
 
     useEffect(() => {
-        fetch('http://localhost:5000/alltoys')
+        fetch('https://toy-land-server-beta.vercel.app/alltoys')
             .then(res => res.json())
             .then(data => {
                 setAllToys(data);

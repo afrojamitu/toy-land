@@ -14,7 +14,7 @@ const AllToys = () => {
     const [search, setSearch] = useState('');
 
     useEffect(() => {
-        fetch(`http://localhost:5000/alltoys?search=${search}&sort=${asc ? 'asc' : 'desc'}`)
+        fetch(`https://toy-land-server-beta.vercel.app/alltoys?search=${search}&sort=${asc ? 'asc' : 'desc'}`)
             .then(res => res.json())
             .then(data => {
                 setAllToys(data);

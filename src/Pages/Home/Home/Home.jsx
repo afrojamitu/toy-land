@@ -4,11 +4,18 @@ import Gallery from '../Gallery/Gallery';
 import DeliveryMethod from '../DeliveryMethod/DeliveryMethod';
 import ReadStory from '../ReadStory/ReadStory';
 import ReactTab from '../Tab/ReactTab';
+import {Helmet} from "react-helmet";
 
 const Home = () => {
     return (
         <div>
+
+            <Helmet>
+                <title>Toy Land - Best place to buy toys for your kids</title>
+            </Helmet>
             <Banner></Banner>
+
+            
 
             <div className='md:w-9/12 mx-10 md:mx-auto'>
                 <ReactTab></ReactTab>
@@ -17,11 +24,11 @@ const Home = () => {
                 <p className='text-slate-500 text-center'>Kids toys offer endless joy and learning opportunities. From building blocks to imaginative playsets, they stimulate creativity and foster cognitive development. With a wide range of options, children can explore, discover, and have fun while engaging<br /> their minds and expanding their imagination.</p>
 
                 <Gallery></Gallery>
-
                 <DeliveryMethod></DeliveryMethod>
-
                 <ReadStory></ReadStory>
             </div>
+
+
         </div>
     );
 };

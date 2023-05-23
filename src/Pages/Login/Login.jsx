@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { FaGithub, FaGoogle, FaTwitter } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
+import { Helmet } from 'react-helmet';
 
 const Login = () => {
     const {signIn, googleSignIn} = useContext(AuthContext);
@@ -39,6 +40,9 @@ const Login = () => {
 
     return (
         <div className='md:w-9/12 mx-5 md:mx-auto'>
+             <Helmet>
+                <title>Login | ToyLand</title>
+            </Helmet>
             <h1 className='text-3xl text-center font-bold pt-8'>Please Login</h1>
 
             <form onSubmit={handleLogin} className='mt-10 mb-20 rounded-xl w-full grid md:grid-cols-2 justify-between items-center'>

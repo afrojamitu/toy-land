@@ -42,55 +42,32 @@ const ReactTab = () => {
         <div>
             <h1 className='text-3xl text-center font-bold mt-10 mb-4'>Shop by Category</h1>
 
-            <Tabs selectedIndex={tabIndex} onSelect={(index) => {
-                setTabIndex(index)
-                // console.log(index)
-            }
-            }>
+            <div>
+                <Tabs selectedIndex={tabIndex} onSelect={(index) => {
+                    setTabIndex(index)
+                    // console.log(index)
+                }
+                }>
 
-                <TabList>
-                    <Tab>Elsa</Tab>
-                    <Tab>Disney Castle</Tab>
-                    <Tab>Rapunzel</Tab>
-                </TabList>
-                <div className='grid md:grid-cols-3 gap-5'>
-                    <TabPanel>
-                        {
-                            currentToy.map(singleToy => <TabData
-                                key={singleToy._id}
-                                tabData={singleToy}
-                            >
-                            </TabData>)
-                        }
+                    <TabList>
+                        <Tab>Elsa</Tab>
+                        <Tab>Disney Castle</Tab>
+                        <Tab>Rapunzel</Tab>
+                    </TabList>
+                        <div className='grid grid-cols-2 md:grid-cols-5 gap-5 my-8'>
+                            {
+                                currentToy.map(singleToy => <TabData
+                                    key={singleToy._id}
+                                    tabData={singleToy}
+                                >
+                                </TabData>)
+                            }
 
-                    </TabPanel>
-                </div>
-                <div className='grid md:grid-cols-3 gap-5'>
-                    <TabPanel>
-                        {
-                            currentToy.map(singleToy => <TabData
-                                key={singleToy._id}
-                                tabData={singleToy}
-                            >
-                            </TabData>)
-                        }
+                        </div>
 
-                    </TabPanel>
-                </div>
-                <div className='grid md:grid-cols-3 gap-5'>
-                    <TabPanel>
-                        {
-                            currentToy.map(singleToy => <TabData
-                                key={singleToy._id}
-                                tabData={singleToy}
-                            >
-                            </TabData>)
-                        }
-
-                    </TabPanel>
-                </div>
-
-            </Tabs>
+                        
+                </Tabs>
+            </div>
 
 
 

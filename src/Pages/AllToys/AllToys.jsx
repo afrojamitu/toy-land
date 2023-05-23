@@ -1,8 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import ToyCard from './ToyCard';
 import { FaSearch } from 'react-icons/fa';
-import ReactTab from '../Home/Tab/ReactTab';
-import Home from '../Home/Home/Home'
+import {Helmet} from "react-helmet";
 
 const AllToys = () => {
 
@@ -29,11 +28,15 @@ const AllToys = () => {
     const toggleShowAll = () => {
         setShowAll(!showAll);
     };
-    
+
     const limitedData = showAll ? alltoys : alltoys.slice(0, 20);
 
     return (
         <div className='md:w-9/12 md:mx-auto mx-10 my-16'>
+
+            <Helmet>
+                <title>All Toys | ToyLand</title>
+            </Helmet>
             <div className='text-center'>
                 <h1 className='text-4xl font-bold'>All Disney Toys</h1>
                 <p className='text-lg text-slate-500'>Barbie dolls have been a beloved toy for children around the world for decades. While it is difficult to quantify exactly how much kids love Barbie, it is safe to say that Barbie has had a significant impact and a large fan base.</p>
@@ -77,9 +80,6 @@ const AllToys = () => {
                             limitedData.map(alltoy => <ToyCard key={alltoy._id} alltoy={alltoy}></ToyCard>)
                         }
                     </table>
-                    {/* {
-                        alltoys.map(toy => <ReactTab key={toy._id} toy={toy}></ReactTab>)
-                    } */}
 
                     {!showAll && (
                         <div colSpan="7" className="text-center">

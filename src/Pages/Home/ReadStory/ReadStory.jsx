@@ -10,8 +10,8 @@ const ReadStory = () => {
 
             <div className="carousel w-full">
                 <div id="slide1" className="carousel-item relative w-full ">
-                    <div className='flex justify-between items-center gap-10'>
-                        <img src="https://kbimages1-a.akamaihd.net/2e8bd798-ae1d-4585-88bf-9e5bc1e86b7a/353/569/90/False/tangled-rapunzel-s-tale.jpg" className="h-96" />
+                    <div className='flex justify-between items-center gap-5'>
+                        <img src="https://kbimages1-a.akamaihd.net/2e8bd798-ae1d-4585-88bf-9e5bc1e86b7a/353/569/90/False/tangled-rapunzel-s-tale.jpg" className="h-32 md:h-96" />
                         <div className='text-start space-y-2'>
                             <h1 className='text-2xl font-bold'>Read Rapunzel Full Story</h1>
                             <p>Download the online copy of this book.</p>
@@ -30,7 +30,7 @@ const ReadStory = () => {
                 <div id="slide2" className="carousel-item relative w-full">
 
                     <div className='flex justify-between items-center gap-10'>
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9B5c_JeWnXlI2XZBCJSwlOqVUuvGlQAY7Ra1jmHA_C0MXY02RyaYW4i4cUhZqoP5tIdk&usqp=CAU" className="h-96" />
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9B5c_JeWnXlI2XZBCJSwlOqVUuvGlQAY7Ra1jmHA_C0MXY02RyaYW4i4cUhZqoP5tIdk&usqp=CAU" className="h-32 md:h-96" />
                         <div className='text-start space-y-2'>
                             <h1 className='text-2xl font-bold'>Read Frozen Full Story</h1>
                             <p>Download the online copy of this book.</p>
@@ -50,7 +50,7 @@ const ReadStory = () => {
                 <div id="slide3" className="carousel-item relative w-full">
 
                     <div className='flex justify-between items-center gap-10'>
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAJUfPLk4Pq1hYXqchJ2HZP1fq0WulYPs51bQ0fpG9Xkgz5N240hPsruL2l-tvFSt-htQ&usqp=CAU" className="h-96" />
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAJUfPLk4Pq1hYXqchJ2HZP1fq0WulYPs51bQ0fpG9Xkgz5N240hPsruL2l-tvFSt-htQ&usqp=CAU" className="h-32 md:h-96" />
                         <div className='text-start space-y-2'>
                             <h1 className='text-2xl font-bold'>Read Moana Full Story</h1>
                             <p>Download the online copy of this book.</p>

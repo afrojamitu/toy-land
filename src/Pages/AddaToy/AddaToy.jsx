@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 import Swal from 'sweetalert2'
+import { Helmet } from 'react-helmet';
 
 const AddaToy = () => {
 
@@ -57,6 +58,9 @@ const AddaToy = () => {
 
     return (
         <div className='md:w-9/12 md:mx-auto mx-10'>
+            <Helmet>
+                <title>Add a Toy | ToyLand</title>
+            </Helmet>
             <h1 className='text-3xl text-center font-bold pt-8'>Add a Toy</h1>
             <form onSubmit={handleAddToy} className='mb-20 mt-10 rounded-xl w-full'>
                 <div className='bg-purple-200 p-10 md:p-20 space-y-4'>

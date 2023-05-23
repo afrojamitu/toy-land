@@ -6,7 +6,7 @@ const DeliveryMethod = () => {
             <h1 className='text-3xl font-bold text-center py-3'>Our Delivery methods</h1>
             <p className='text-slate-500 text-center'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus adipisci ipsum similique recusandae impedit nihil voluptatibus quam commodi at beatae! Deleniti ipsum sunt rerum pariatur velit odit, animi sed esse?</p>
 
-            <div className='flex items-center justify-between gap-10 my-8 bg-[#000C32] p-8 rounded-lg'>
+            <div className='grid md:grid-cols-3 items-center justify-between gap-10 my-8 bg-[#000C32] p-8 rounded-lg'>
                 <div className='space-y-2'>
                     <img className='w-28 rounded' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIjX_-FZgkW87Y1rBTXyAxVLi-xZ870Rtg-w&usqp=CAU" alt="" />
 

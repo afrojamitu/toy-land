@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 import { FaGithub, FaGoogle, FaTwitter } from 'react-icons/fa';
+import { Helmet } from 'react-helmet';
 
 const Register = () => {
 
@@ -45,6 +46,9 @@ const Register = () => {
 
     return (
         <div className=''>
+            <Helmet>
+                <title>Register here | ToyLand</title>
+            </Helmet>
             <div className='md:w-9/12 mx-5 md:mx-auto mt-10 mb-20'>
             <h1 className='text-3xl text-center font-bold pb-8'>Register an Account</h1>
                 <form onSubmit={handleRegister} className='bg-purple-200 p-10 md:p-20 rounded-xl md:w-2/3 mx-auto'>

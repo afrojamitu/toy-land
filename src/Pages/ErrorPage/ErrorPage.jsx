@@ -1,9 +1,13 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
 const ErrorPage = () => {
     return (
         <div className='relative'>
+            <Helmet>
+                <title>404 | Error</title>
+            </Helmet>
             <img className='w-full h-[100vh]' src="https://freefrontend.com/assets/img/html-funny-404-pages/HTML-Yeti-404-Page.gif" alt="" />
 
             <div className='absolute top-56 right-[500px]'>
